@@ -1,0 +1,80 @@
+$myFont: Helvetica, sans-serif;
+$primaryColor: #000;
+
+@mixin default-box {
+  color: lighten($color: $primaryColor, $amount: 90);
+  font-size: 25px;
+  width: 500px;
+  display: block;
+  padding: 20px;
+}
+
+.twitter-component {
+  background: $primaryColor;
+  @include default-box;
+
+  h5 {
+    color: lighten($color: $primaryColor, $amount: 90);
+  }
+  span {
+    font-size: 1rem;
+    display:inline-block;
+  }
+  .ftsz {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+
+  .left {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    padding:2%;
+    img {
+      width: 80%;
+    border-radius: 50%;
+    }
+  }
+  .right {
+    width: 70%;
+    display: inline-block;
+    .comments {
+      position:relative;
+      width: 400px;
+      height:200px;
+      display:block;
+      border-bottom: 1px solid lighten($color: $primaryColor, $amount: 80);
+      .commentbox {
+        
+        z-index: 3;
+        background: $primaryColor;
+        color: lighten($color: $primaryColor, $amount: 90);
+      }
+      textarea {
+        font-family: $myFont;
+        color: lighten($color: $primaryColor, $amount: 90);
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 400px;
+        z-index: 5;
+        opacity: 0.09;
+        height:200px;
+        
+      }
+      
+    }
+  }
+  
+  
+  .cls {
+    color: red
+  }
+  
+  .ns {
+    color: white
+  }
+  .red {
+    color: red !important;
+  }
+}

@@ -1,0 +1,26 @@
+<section class="twitter-component">
+  <h5>{{title}}</h5>
+  <div class="left">
+    <img src="https://avatars.githubusercontent.com/u/5697806?v=4" alt="rajib" />
+  </div>
+  <div class="right">
+    <div class="comments">
+      <!-- Text area which is just for input-->
+      <textarea type="text" (keyup)="addedTxt($event)"></textarea>
+      <!-- Where all design can configure-->
+      <span class="commentbox" *ngIf="comment1">
+        <ng-container>{{comment1}}</ng-container>
+      </span>
+      <span class="commentbox red" *ngIf="comment2">
+        <ng-container class="commentbox">{{comment2}}</ng-container>
+      </span>
+    </div>
+    <!-- hint section -->
+    <div class="ftsz" [ngClass]="{'ns':tCol === true, 'cls':tCol === false}">
+      <em>{{textOfIns}}{{numberOfCharNumber}}</em>
+    </div>
+  </div>
+
+  
+  <button>Add</button> <button>Tweet</button>
+</section>
